@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Borne de Recharge:  Fichier source de /Users/a.r./Desktop/Code C++/Generateur_SAVE.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="panneau_vehicule_electrique_1.jpg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Borne de Recharge
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_86b5a9729a0a002a8d3128764d7c6f7c.html">Code C++</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Generateur_SAVE.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_generateur___s_a_v_e_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef GENERATEUR_SAVE_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define GENERATEUR_SAVE_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;donnees_borne.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;memoire_borne.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;lcarte.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;mem_sh.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_voyant_8h.html">Voyant.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_prise_8h.html">Prise.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_bouton_8h.html">Bouton.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_generateur___s_a_v_e.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_generateur___s_a_v_e.html">Generateur_SAVE</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; private :</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    entrees *io ;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> shmid ;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_voyant.html">Voyant</a> voyant ;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_prise.html">Prise</a> prise ;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_bouton.html">Bouton</a> bouton ;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; public :</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_generateur___s_a_v_e.html#ac4bd3e13851dfb1005268d37cfa12ee8">Generateur_SAVE</a>() ;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_generateur___s_a_v_e.html#a3e80d9a1ae9f0fc7b918830d1a592b32">charger</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_generateur___s_a_v_e.html#ad99f3ea8f4401d24fcf1a55d2b1b3e0d">generer_PWM</a>(pwm signal) ;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_generateur___s_a_v_e.html#ae746df48236c37fb5e30a69b291189de">fermer_AC</a>() ;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_generateur___s_a_v_e.html#a170d375aa808448f5acf9191bceb11bb">ouvrir_AC</a>() ;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_generateur___s_a_v_e.html#a1dc925373fb7eaf36ee09f905749f044">reset_gene</a>() ;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;} ;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_generateur___s_a_v_e_html_ac4bd3e13851dfb1005268d37cfa12ee8"><div class="ttname"><a href="class_generateur___s_a_v_e.html#ac4bd3e13851dfb1005268d37cfa12ee8">Generateur_SAVE::Generateur_SAVE</a></div><div class="ttdeci">Generateur_SAVE()</div><div class="ttdoc">Constructeur.</div><div class="ttdef"><b>Definition:</b> Generateur_SAVE.cpp:21</div></div>
+<div class="ttc" id="aclass_generateur___s_a_v_e_html_a170d375aa808448f5acf9191bceb11bb"><div class="ttname"><a href="class_generateur___s_a_v_e.html#a170d375aa808448f5acf9191bceb11bb">Generateur_SAVE::ouvrir_AC</a></div><div class="ttdeci">void ouvrir_AC()</div><div class="ttdoc">Méthode ouvrir_AC.</div><div class="ttdef"><b>Definition:</b> Generateur_SAVE.cpp:145</div></div>
+<div class="ttc" id="aclass_generateur___s_a_v_e_html_ad99f3ea8f4401d24fcf1a55d2b1b3e0d"><div class="ttname"><a href="class_generateur___s_a_v_e.html#ad99f3ea8f4401d24fcf1a55d2b1b3e0d">Generateur_SAVE::generer_PWM</a></div><div class="ttdeci">void generer_PWM(pwm signal)</div><div class="ttdoc">Méthode generer_PWM.</div><div class="ttdef"><b>Definition:</b> Generateur_SAVE.cpp:108</div></div>
+<div class="ttc" id="aclass_generateur___s_a_v_e_html_ae746df48236c37fb5e30a69b291189de"><div class="ttname"><a href="class_generateur___s_a_v_e.html#ae746df48236c37fb5e30a69b291189de">Generateur_SAVE::fermer_AC</a></div><div class="ttdeci">void fermer_AC()</div><div class="ttdoc">Méthode fermer_AC.</div><div class="ttdef"><b>Definition:</b> Generateur_SAVE.cpp:135</div></div>
+<div class="ttc" id="aclass_prise_html"><div class="ttname"><a href="class_prise.html">Prise</a></div><div class="ttdoc">Classe représentant la prise.</div><div class="ttdef"><b>Definition:</b> Prise.h:23</div></div>
+<div class="ttc" id="aclass_voyant_html"><div class="ttname"><a href="class_voyant.html">Voyant</a></div><div class="ttdoc">Classe représentant les voyants.</div><div class="ttdef"><b>Definition:</b> Voyant.h:25</div></div>
+<div class="ttc" id="a_bouton_8h_html"><div class="ttname"><a href="_bouton_8h.html">Bouton.h</a></div><div class="ttdoc">Header de Bouton.</div></div>
+<div class="ttc" id="aclass_generateur___s_a_v_e_html"><div class="ttname"><a href="class_generateur___s_a_v_e.html">Generateur_SAVE</a></div><div class="ttdoc">Classe représentant le génerateur SAVE.</div><div class="ttdef"><b>Definition:</b> Generateur_SAVE.h:27</div></div>
+<div class="ttc" id="a_prise_8h_html"><div class="ttname"><a href="_prise_8h.html">Prise.h</a></div><div class="ttdoc">Header de Prise.</div></div>
+<div class="ttc" id="aclass_generateur___s_a_v_e_html_a3e80d9a1ae9f0fc7b918830d1a592b32"><div class="ttname"><a href="class_generateur___s_a_v_e.html#a3e80d9a1ae9f0fc7b918830d1a592b32">Generateur_SAVE::charger</a></div><div class="ttdeci">void charger()</div><div class="ttdoc">Méthode charger.</div><div class="ttdef"><b>Definition:</b> Generateur_SAVE.cpp:34</div></div>
+<div class="ttc" id="aclass_bouton_html"><div class="ttname"><a href="class_bouton.html">Bouton</a></div><div class="ttdoc">Classe représentant les boutons.</div><div class="ttdef"><b>Definition:</b> Bouton.h:24</div></div>
+<div class="ttc" id="a_voyant_8h_html"><div class="ttname"><a href="_voyant_8h.html">Voyant.h</a></div><div class="ttdoc">Header de Voyant.</div></div>
+<div class="ttc" id="aclass_generateur___s_a_v_e_html_a1dc925373fb7eaf36ee09f905749f044"><div class="ttname"><a href="class_generateur___s_a_v_e.html#a1dc925373fb7eaf36ee09f905749f044">Generateur_SAVE::reset_gene</a></div><div class="ttdeci">int reset_gene()</div><div class="ttdoc">Méthode reset_gene.</div><div class="ttdef"><b>Definition:</b> Generateur_SAVE.cpp:155</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>
