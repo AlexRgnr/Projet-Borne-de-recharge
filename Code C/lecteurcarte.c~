@@ -1,0 +1,77 @@
+#include <unistd.h>
+#include <stdio.h>
+#include "lecteurcarte.h"
+
+
+void lecteurcarte_initialiser()
+{
+ initialisations_ports() ;
+ voyants_initialiser() ;
+ boutons_initialiser() ;
+}
+
+void lecteurcarte_lire_carte()
+{
+unsigned int num_carte = 0 ;
+
+printf("Presentez carte \n") ;
+attente_insertion_carte() ;
+
+ if(carte_inseree())
+	{
+	num_carte = lecture_numero_carte() ;
+ 	printf("Carte : %d \n", num_carte) ;	
+
+ 	if(authentifier(num_carte) == 1 ){	 
+	   printf("Authentification Client : OK\n") ;
+	}
+	else
+	printf("Authentification non reconnue\n");
+	 
+
+	timer_raz() ;
+	blink() ;		 
+	timer_raz() ;
+
+	  while(timer_valeur() < 60)
+	  {			
+	   if(appui_bouton_charge() == 1)
+		{		
+		 raz_boutons() ;
+		 set_dispo(OFF) ;
+		 break ;
+		}
+	  }	
+		 printf("Retirez carte \n") ;
+		 attente_retrait_carte() ;
+ 	 }
+
+  		 charger() ; 
+		 printf("Presentez carte pour Retrait \n") ;
+		 attente_insertion_carte() ;
+ if(carte_inseree())
+	{
+		 if(authentifier(num_carte) == 1 )
+	         {
+		  printf("Authentification Retrait Vehicule : OK\n") ;
+		  
+		   while(1){ //oblige de faire le while(1) ici et non dans le gene_save (pourquoi ??)
+		    if(reset_gene()==1){
+		    verouiller_trappe() ;
+		    break ;
+		    }
+		   }
+		   
+		 
+		  printf("Vous pouvez recuperer votre vehicule\n") ;
+	
+	   
+	printf("N'oubliez pas votre carte\n") ;
+attente_retrait_carte() ;
+		}
+	}
+//liberation_ports() ;
+set_charge(OFF) ;
+set_dispo(VERT) ;	
+}
+

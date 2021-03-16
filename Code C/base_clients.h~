@@ -1,0 +1,7 @@
+#ifndef BASE_CLIENT_H
+#define BASE_CLIENT_H
+#include <lcarte.h>
+
+int authentifier(num_carte) ;
+
+#endif

@@ -1,0 +1,35 @@
+#include <unistd.h>
+#include "voyants.h"
+
+
+entrees *io ;
+int shmid ;
+
+void voyants_initialiser() 
+{
+ io = acces_memoire(&shmid) ;
+ if (io==NULL) printf("Erreur pas de mem sh\n");
+}
+
+void set_charge(led Couleur)
+{
+ io->led_charge = Couleur ;
+}
+
+void set_dispo(led Couleur) 
+{
+ io->led_dispo = Couleur ;
+}
+
+
+
+void blink()
+{
+ while(timer_valeur() < 4) 
+  {
+   if(timer_valeur()%2 == 0)
+   set_charge(VERT) ;
+   if(timer_valeur()%2 == 1)
+   set_charge(OFF) ;
+  }
+}
